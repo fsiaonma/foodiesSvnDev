@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- <html lang="en" manifest="./manifest.appcache"> -->
+<html>
+<head>
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="./client-pro/style/min.css">
+
+	<meta charset="utf-8"/>
+	<meta name="description" content=""/>
+	<meta id="viewport" name="viewport" content="user-scalable=no, height=883, width=497"/>
+    <meta name="full-screen" content="yes"/>
+    <meta id="screenOri" name="screen-orientation" content="portrait"/>
+
+    <script type="text/javascript" src="./client-pro/min.js"></script>
+
+    <script type="text/javascript" src="./client-pro/config/game/config.js"></script>
+	<script type="text/javascript" src="./client-pro/config/game/powerup.js"></script>
+	<script type="text/javascript" src="./client-pro/config/game/level.js"></script>
+	<script type="text/javascript" src="./client-pro/config/game/networkgem.js"></script>
+	<script type="text/javascript" src="./client-pro/config/interface/mockResponse/mockData.js"></script>
+	<script type="text/javascript" src="./client-pro/config/interface/HttpInterface.js"></script>
+	<script type="text/javascript" src="./client-pro/config/interface/SocketInterface.js"></script>
+	<script type="text/javascript" src="./client-pro/config/config.js"></script>
+	<script type="text/javascript" src="./client-pro/config/res.js"></script>
+</head>
+
+<body style="margin: 0; padding: 0; width:432px; text-align:center;">
+	<div id="container" style="width:100%; height:100%; position: absolute;"></div>
+	<div id="msgBox" class="msgBox" style="display: none;">
+		<div id="msgContent" class="msgContent">
+			<font id="msgFont" class="msgFont"></font>
+		</div>
+	</div>
+
+	<script type="text/html" id="modSelectPatten">
+		<div class="start">
+			<div class="choose_mode">
+				<a id="MultiPlayBtn" href="javascript:;" class="btn_double">双人对战</a>
+				<a id="SinglePlayBtn" href="javascript:;" class="btn_single">单人游戏</a>
+			</div>
+			<div class="start_menu">
+				<a href="javascript:;">教程</a>
+				<a href="javascript:;">设置</a>
+				<a href="javascript:;">帮助</a>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/html" id="loginPatten">
+		<div class="login_reg">
+			<div class="tab">
+				<i class="current">登录</i>
+				<i id="gotoRegiestBtn">注册</i>
+			</div>
+			<div class="login" style="display:block;">
+				<ul>
+					<li><span>用户名</span><input id="loginUsername" class="txt_ipt" type="text" /></li>
+					<li><span>密码</span><input id="loginPassword" class="txt_ipt" type="password" /></li>
+				</ul>
+				<div class="btns">
+					<a id="loginBtn" href="javascript:;" class="btn_confirm">确认</a>
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/html" id="regiestPatten">
+		<div class="login_reg">
+			<div class="tab">
+				<i id="gotoLoginBtn" class="current">登录</i>
+				<i>注册</i>
+			</div>
+			<div class="reg" style="display:block;">
+				<ul>
+					<li><span>用户名</span><input id="regUsername" class="txt_ipt" type="text" /></li>
+					<li><span>用户密码</span><input id="regPassword" class="txt_ipt" type="password" /></li>
+					<li><span>重复密码</span><input id="reRegPassword" class="txt_ipt" type="password" /></li>
+					<li class="sex">
+						<span>吃货性别</span>
+						<label id="famaleChoiceBtn" class="famale"><i id="famaleChoice" class="current"></i></label>
+						<label id="maleChoiceBtn" class="male"><i id="maleChoice"></i></label>
+					</li>
+				</ul>
+				<div class="btns">
+					<a id="regiestSubmitBtn" href="javascript:;" class="btn_confirm">确定</a>
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/html" id="friendsPatten">
+		<div id="friendContainer" class="friend">
+			<div id="buttomMenu" class="friend_menu">
+				<a href="javascript:;">返回首页</a>
+				<a id="toSearchBtn" href="javascript:;">随机对手</a>
+				<a href="javascript:;">添加好友</a>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/html" id="stageContainer">
+		<canvas id="stageCanvas" height="768" width="432"></canvas>
+	</script>
+	<div id="haxe:trace"></div>
+</body>
+<script type="text/javascript">
+	EventDelegate.init();
+</script>
+</html>
