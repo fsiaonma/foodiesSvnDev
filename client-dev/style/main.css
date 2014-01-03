@@ -1,0 +1,29 @@
+.msgBox {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.msgContent {
+	position: relative;
+	margin: 200px auto;
+	width: 337px;
+	height: 251px;
+	background: url(../../images/user/msgBoxErr.png) no-repeat;
+}
+
+.msgFont {
+	top: 170px;
+	position: relative;
+	font-size: 23px;
+	font-family: 黑体;
+	margin: auto;
+}
+
+html {
+	background-color: #ffe829;
+}

@@ -1,0 +1,1 @@
+var zx_foodies = zx_foodies || {};
